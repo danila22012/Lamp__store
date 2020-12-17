@@ -1,0 +1,44 @@
+.not-found {
+    max-width: 440px;
+    margin: auto;
+    padding-top: 60px;
+
+    &__img {
+        width: 100%;
+        padding: 20px 40px;
+    }
+    &__title {
+        text-align: center;
+        font-size: 26px;
+        padding-bottom: 20px;
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        max-width: 256px;
+        margin: auto;
+        button {
+            width: 100%;
+            font-size: 12px;
+            padding: 10px 0;
+            background: #fff;
+            border: 1px solid #000;
+            outline: none;
+            transition: .2s;
+            cursor: pointer;
+            &:hover{
+                background: #000;
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:420px){
+    .not-found{
+        padding-top: 0;
+        &__title{
+            font-size: 14px;
+        }
+    }
+}

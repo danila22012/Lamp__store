@@ -15,6 +15,7 @@ import  UserHomePage from "../../Containers/UserHomePage/UserHomePage";
 import  UserShowLamps  from "../../Containers/UserShowLamps/UserShowLamps";
 import UserCartContainer from "../../Containers/UserCartContainer/UserCartContainer";
 import UserRegistration from "../../Containers/UserRegistration/UserRegistration";
+import { NotFound } from "../NotFound/NotFound";
 
 
 
@@ -55,13 +56,15 @@ class App extends Component {
                             <Route path="/user-profile">
                                 <UserRegistration path={'user-profile'}/>
                             </Route>
-                            
+                            <Route path="/not-found">
+                                <NotFound/>
+                            </Route>
 
 
 
-                            {/* <Route path="/">
-                                <Redirect to="/home" />
-                            </Route> */}
+                            <Route path="/">
+                                <Redirect to="/not-found"/>
+                            </Route>
                         </Switch>
                     </Router>
                 </Provider>
