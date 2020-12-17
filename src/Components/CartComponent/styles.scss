@@ -205,72 +205,81 @@
             flex-direction: column;
             align-items: center;
         }
-        &__products{
+        &__products {
             padding-left: 0;
         }
-        
     }
 }
 @media screen and (max-width: 500px) {
     .cart {
-        &__name{
-            &-name{
+        &__name {
+            &-name {
                 font-size: 10px;
             }
-            &-close{
+            &-close {
                 width: 15px;
                 height: 15px;
             }
         }
-        &__quantity{
-            &-caption{
+        &__quantity {
+            &-caption {
                 display: none;
             }
-           
-            &-less,&-counter, &-more{
+
+            &-less,
+            &-counter,
+            &-more {
                 height: 22px;
                 width: 22px;
                 font-size: 10px;
             }
-            &-price{
+            &-price {
                 font-size: 12px;
             }
         }
-        &__descr{
+        &__descr {
             padding-bottom: 6px;
         }
     }
 }
-@media screen and (max-width:420px){
-    .cart{
+@media screen and (max-width: 420px) {
+    .cart {
         padding: 0;
-        &__img{
+        &__img {
             max-width: 90px;
             max-height: 100px;
         }
-        &__item{
+        &__item {
             justify-content: space-between;
         }
-        &__products{
+        &__empty{
+            padding: 0 10px 10px 10px;
+        }
+        &__products {
             width: 100%;
             padding: 0 10px;
             padding-bottom: 25px;
         }
-        &__summary{
+        &__summary {
             position: relative;
             bottom: 0;
             right: 0;
             left: 0;
 
-            
+            &-delivery,
+            &-total {
+                padding: 10px;
+            }
+
             max-width: 100%;
             width: 100%;
             padding: 8px 0px;
             border: none;
-            &-submit{
+            &-submit {
                 margin: auto;
             }
-            &-item, &-title{
+            &-item,
+            &-title {
                 display: none;
             }
         }
