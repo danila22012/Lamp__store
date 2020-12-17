@@ -1,6 +1,6 @@
 .btn-login{
     font-size: 14px;
-    padding: 14px 28px 13px 41px;
+    padding: 14px 20px 13px 35px;
     background: #fff;
     border: 1px solid #6D6D6D;
     cursor: pointer;
@@ -11,6 +11,7 @@
 }
 
 .registration-form{
+    padding: 0 10px;
     max-width: 368px;
     margin: auto;
     display: flex;
@@ -78,6 +79,9 @@
             margin: 5px;
         }
     }
+    &__btn-create{
+        width: 100%;
+    }
     &__btns-login{
         width: 100%;
         padding-top: 27px;
@@ -113,4 +117,12 @@
     font-size: 12px;
     color: #f00;
 
+}
+@media screen and (max-width:500px){
+    .with-facebook-title, .with-google-title{
+        display: none;
+    }
+    .btn-login{
+        padding: 14px 70px 13px 71px;
+    }
 }

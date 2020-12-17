@@ -74,8 +74,9 @@
 }
 .burger-menu{
     margin-left: 12px;
+    display: none;
     &__list{
-        display: none;
+       
         
         position: absolute;
         top: 50px;
@@ -87,7 +88,10 @@
     }
     &__item{
         position: relative;
-       
+        padding:0 10px;
+        &--pressed{
+            border-bottom: 1px solid #dedede;
+        }
        
     }
    
@@ -133,9 +137,10 @@
             display: none;
         }
     }
-    .burger-menu__list{
+    .burger-menu{
         display: block;
     }
+    
 }
 @media screen and (max-width: 500px) {
     .top-bar__link {

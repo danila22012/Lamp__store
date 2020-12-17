@@ -12,8 +12,11 @@
     position: relative;
     margin: 6px 6px;
     background: #f0f0f0;
-    min-width: 272px;
-
+    width: 273px;
+    
+    &__img{
+        width: 100%;
+    }
     &__info {
         padding: 0px 0px 16px 16px;
     }
@@ -71,6 +74,6 @@
 }
 @media screen and (max-width: 600px) {
     .product-item{
-        width: 50%;
+        width: 45%;
     }
 }

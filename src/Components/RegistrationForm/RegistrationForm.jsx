@@ -21,7 +21,7 @@ export const RegistrationForm = ({ validateInput, validateSubmit, handleChange, 
                         onChange={handleChange}
                         value={userData.email}
                         onBlur={validatelogin}
-                        
+
                         onFocus={({ target }) => {
                             target.className = 'registration-form__input-input'
                             target.parentNode.removeAttribute('id')
@@ -57,7 +57,7 @@ export const RegistrationForm = ({ validateInput, validateSubmit, handleChange, 
                 >  LOGIN</button>
                 <div className="registration-form__login">
                     <p>Don't have an account?</p>
-                    <p className="registration-form__login-login" onClick={()=>setisLogin(false)}><u>Create an account</u></p>
+                    <p className="registration-form__login-login" onClick={() => setisLogin(false)}><u>Create an account</u></p>
                 </div>
                 <div className="registration-form__hrs">
                     <div className="registration-form__hrs-line"></div>
@@ -67,10 +67,11 @@ export const RegistrationForm = ({ validateInput, validateSubmit, handleChange, 
                 <div className="registration-form__btns-login">
                     <button className="registration-form__btns-login-google btn-login">
                         <GoogleIcon className="google-icon btn-icon" />
-                         With Google</button>
+                        <span className="with-google-title">With Google</span></button>
                     <button className="registration-form__btns-login-facebook btn-login">
                         <FacebookIcon className="facebook-icon btn-icon" />
-                        With Facebook</button>
+                        <span className="with-facebook-title">With Facebook</span>
+                    </button>
                 </div>
             </div> :
 
@@ -147,10 +148,12 @@ export const RegistrationForm = ({ validateInput, validateSubmit, handleChange, 
                     <div className="registration-form__btns-login">
                         <button className="registration-form__btns-login-google btn-login">
                             <GoogleIcon className="google-icon btn-icon" />
-                         With Google</button>
+                            <span className="with-google-title">With Google</span>
+                            </button>
                         <button className="registration-form__btns-login-facebook btn-login">
                             <FacebookIcon className="facebook-icon btn-icon" />
-                        With Facebook</button>
+                            <span className="with-facebook-title">With Facebook</span>
+                            </button>
                     </div>
                 </div>}
 
