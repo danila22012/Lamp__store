@@ -1,5 +1,4 @@
-
-.home-products{
+.home-products {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -7,29 +6,26 @@
     max-width: 1140px;
     justify-content: center;
 
-
     padding-bottom: 25px;
-  
-    
 }
-.product-item{
+.product-item {
     position: relative;
     margin: 6px 6px;
-    background: #F0F0F0;
+    background: #f0f0f0;
     min-width: 272px;
 
-    &__info{
+    &__info {
         padding: 0px 0px 16px 16px;
     }
-    &__price{
+    &__price {
         font-weight: 500;
         font-size: 14px;
     }
-    &__name{
+    &__name {
         font-size: 14px;
     }
 }
-.add-product-btn{
+.add-product-btn {
     content: "";
 
     position: absolute;
@@ -37,17 +33,15 @@
     width: 22px;
     top: 13px;
     right: 14px;
-    transition: .2s;
-    background: url('../../Assets/Add.png') center/cover no-repeat; 
+    transition: 0.2s;
+    background: url("../../Assets/Add.png") center/cover no-repeat;
 
     cursor: pointer;
 }
-.add-product-btn--pressed{
-
-    background: url('../../Assets/Delete.png') center/cover no-repeat;
-    
+.add-product-btn--pressed {
+    background: url("../../Assets/Delete.png") center/cover no-repeat;
 }
-.product-sort{
+.product-sort {
     position: relative;
     max-width: 1140px;
     padding-left: 10px;
@@ -55,18 +49,17 @@
     color: #000;
     margin: auto;
     padding-top: 15px;
-    &__sort{
-        
+    &__sort {
         margin-left: 10px;
         font-size: 14px;
     }
 }
-.show-more{
+.show-more {
     display: flex;
     justify-content: center;
     max-width: 1140px;
     margin: auto;
-    &__btn{
+    &__btn {
         width: fit-content;
         background: #fff;
         color: #000;
@@ -74,5 +67,10 @@
         outline: none;
         cursor: pointer;
         border: 1px solid #000;
+    }
+}
+@media screen and (max-width: 600px) {
+    .product-item{
+        width: 50%;
     }
 }

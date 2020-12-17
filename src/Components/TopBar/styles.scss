@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     
-    justify-content: space-between;
+    
     position: relative;
     z-index: 6;
 
@@ -13,7 +13,7 @@
         display: flex;
         align-items: center;
         flex-grow: 3;
-        justify-content: space-between;
+       
     }
     &__info {
         display: flex;
@@ -73,8 +73,23 @@
     }
 }
 .burger-menu{
-    display: none;
     margin-left: 12px;
+    &__list{
+        display: none;
+        
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        z-index: 10;
+    }
+    &__item{
+        position: relative;
+       
+       
+    }
    
 }
 .logo {
@@ -109,14 +124,16 @@
         display: none;
     }
     .top-bar {
+        
         &__nav {
             flex-direction: row-reverse;
+            justify-content: space-between;
         }
         &__list{
             display: none;
         }
     }
-    .burger-menu{
+    .burger-menu__list{
         display: block;
     }
 }

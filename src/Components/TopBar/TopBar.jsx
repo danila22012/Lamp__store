@@ -25,8 +25,8 @@ export const TopBar = ({ categories, cartProducts }) => {
 
     return (
         <>
-            {openBurger ? <ul className="burger-menu list">
-                {tempArr.map(el => <li key={el.id} className="burger-menu__item"> <NavLink onClick={()=>setOpenbirger(false)} to={el.alias} className="list__link">{el.title}</NavLink> </li>)}
+            {openBurger ? <ul className="burger-menu__list">
+                {tempArr.map(el => <li key={el.id} className="burger-menu__item"> <NavLink onClick={() => setOpenbirger(false)}  activeClassName="burger-menu__item--pressed" to={el.alias} className="list__link">{el.title}</NavLink> </li>)}
             </ul> : null}
             <div className="top-bar__container">
                 <div className="top-bar">
@@ -37,7 +37,10 @@ export const TopBar = ({ categories, cartProducts }) => {
                             <NavLink to='/home'><Logo /></NavLink>
 
                         </div>
-                        <BurgerMenu onClick={()=>setOpenbirger(true)} className="burger-menu" />
+                        <BurgerMenu onClick={
+                            openBurger ? () => {setOpenbirger(false)} : () => setOpenbirger(true)
+
+                        } className="burger-menu" />
 
                         <ul className="top-bar__list list">
                             {tempArr.map(el => <li key={el.id} className="list__item"> <NavLink to={el.alias} activeClassName="list__link--pressed" className="list__link">{el.title}</NavLink> </li>)}
@@ -54,7 +57,7 @@ export const TopBar = ({ categories, cartProducts }) => {
 
                         >{openModal ? <UserCartPopUp /> : null}
                             <NavLink activeClassName="top-bar__item--pressed" className="top-bar__link top-bar__link--disabled-link" to='/card-list'><Cart />{cartProducts.length}</NavLink>
-                            </div>
+                        </div>
 
 
 
