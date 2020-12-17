@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Lamp__store/static/css/main.56577929.chunk.css",
+    "main.css": "/Lamp__store/static/css/main.234e2e5d.chunk.css",
     "main.js": "/Lamp__store/static/js/main.504bec98.chunk.js",
     "main.js.map": "/Lamp__store/static/js/main.504bec98.chunk.js.map",
     "runtime-main.js": "/Lamp__store/static/js/runtime-main.24d70842.js",
@@ -8,7 +8,7 @@
     "static/js/2.f090f203.chunk.js": "/Lamp__store/static/js/2.f090f203.chunk.js",
     "static/js/2.f090f203.chunk.js.map": "/Lamp__store/static/js/2.f090f203.chunk.js.map",
     "index.html": "/Lamp__store/index.html",
-    "static/css/main.56577929.chunk.css.map": "/Lamp__store/static/css/main.56577929.chunk.css.map",
+    "static/css/main.234e2e5d.chunk.css.map": "/Lamp__store/static/css/main.234e2e5d.chunk.css.map",
     "static/js/2.f090f203.chunk.js.LICENSE.txt": "/Lamp__store/static/js/2.f090f203.chunk.js.LICENSE.txt",
     "static/media/Add.733c66a4.svg": "/Lamp__store/static/media/Add.733c66a4.svg",
     "static/media/BurgerMenu.1e907ff3.svg": "/Lamp__store/static/media/BurgerMenu.1e907ff3.svg",
@@ -28,7 +28,7 @@
   "entrypoints": [
     "static/js/runtime-main.24d70842.js",
     "static/js/2.f090f203.chunk.js",
-    "static/css/main.56577929.chunk.css",
+    "static/css/main.234e2e5d.chunk.css",
     "static/js/main.504bec98.chunk.js"
   ]
 }
