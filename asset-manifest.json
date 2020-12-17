@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Lamp__store/static/css/main.a5cc0be9.chunk.css",
-    "main.js": "/Lamp__store/static/js/main.710fef1a.chunk.js",
-    "main.js.map": "/Lamp__store/static/js/main.710fef1a.chunk.js.map",
+    "main.css": "/Lamp__store/static/css/main.56577929.chunk.css",
+    "main.js": "/Lamp__store/static/js/main.504bec98.chunk.js",
+    "main.js.map": "/Lamp__store/static/js/main.504bec98.chunk.js.map",
     "runtime-main.js": "/Lamp__store/static/js/runtime-main.24d70842.js",
     "runtime-main.js.map": "/Lamp__store/static/js/runtime-main.24d70842.js.map",
-    "static/js/2.8d948922.chunk.js": "/Lamp__store/static/js/2.8d948922.chunk.js",
-    "static/js/2.8d948922.chunk.js.map": "/Lamp__store/static/js/2.8d948922.chunk.js.map",
+    "static/js/2.f090f203.chunk.js": "/Lamp__store/static/js/2.f090f203.chunk.js",
+    "static/js/2.f090f203.chunk.js.map": "/Lamp__store/static/js/2.f090f203.chunk.js.map",
     "index.html": "/Lamp__store/index.html",
-    "static/css/main.a5cc0be9.chunk.css.map": "/Lamp__store/static/css/main.a5cc0be9.chunk.css.map",
-    "static/js/2.8d948922.chunk.js.LICENSE.txt": "/Lamp__store/static/js/2.8d948922.chunk.js.LICENSE.txt",
+    "static/css/main.56577929.chunk.css.map": "/Lamp__store/static/css/main.56577929.chunk.css.map",
+    "static/js/2.f090f203.chunk.js.LICENSE.txt": "/Lamp__store/static/js/2.f090f203.chunk.js.LICENSE.txt",
     "static/media/Add.733c66a4.svg": "/Lamp__store/static/media/Add.733c66a4.svg",
     "static/media/BurgerMenu.1e907ff3.svg": "/Lamp__store/static/media/BurgerMenu.1e907ff3.svg",
     "static/media/Cart.933aaf5c.svg": "/Lamp__store/static/media/Cart.933aaf5c.svg",
@@ -27,8 +27,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.24d70842.js",
-    "static/js/2.8d948922.chunk.js",
-    "static/css/main.a5cc0be9.chunk.css",
-    "static/js/main.710fef1a.chunk.js"
+    "static/js/2.f090f203.chunk.js",
+    "static/css/main.56577929.chunk.css",
+    "static/js/main.504bec98.chunk.js"
   ]
 }
