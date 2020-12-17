@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/Lamp__store/static/css/main.a5cc0be9.chunk.css",
+    "main.js": "/Lamp__store/static/js/main.710fef1a.chunk.js",
+    "main.js.map": "/Lamp__store/static/js/main.710fef1a.chunk.js.map",
+    "runtime-main.js": "/Lamp__store/static/js/runtime-main.24d70842.js",
+    "runtime-main.js.map": "/Lamp__store/static/js/runtime-main.24d70842.js.map",
+    "static/js/2.8d948922.chunk.js": "/Lamp__store/static/js/2.8d948922.chunk.js",
+    "static/js/2.8d948922.chunk.js.map": "/Lamp__store/static/js/2.8d948922.chunk.js.map",
+    "index.html": "/Lamp__store/index.html",
+    "static/css/main.a5cc0be9.chunk.css.map": "/Lamp__store/static/css/main.a5cc0be9.chunk.css.map",
+    "static/js/2.8d948922.chunk.js.LICENSE.txt": "/Lamp__store/static/js/2.8d948922.chunk.js.LICENSE.txt",
+    "static/media/Add.733c66a4.svg": "/Lamp__store/static/media/Add.733c66a4.svg",
+    "static/media/BurgerMenu.1e907ff3.svg": "/Lamp__store/static/media/BurgerMenu.1e907ff3.svg",
+    "static/media/Cart.933aaf5c.svg": "/Lamp__store/static/media/Cart.933aaf5c.svg",
+    "static/media/CartEmpty.cea96dc4.svg": "/Lamp__store/static/media/CartEmpty.cea96dc4.svg",
+    "static/media/Close.4cd3339a.svg": "/Lamp__store/static/media/Close.4cd3339a.svg",
+    "static/media/FacebookIcon.ffb65c27.svg": "/Lamp__store/static/media/FacebookIcon.ffb65c27.svg",
+    "static/media/GoogleIcon.08119522.svg": "/Lamp__store/static/media/GoogleIcon.08119522.svg",
+    "static/media/Logo.8b4ddaea.svg": "/Lamp__store/static/media/Logo.8b4ddaea.svg",
+    "static/media/Minus.59e058c8.svg": "/Lamp__store/static/media/Minus.59e058c8.svg",
+    "static/media/NotFound404.f78e40b0.svg": "/Lamp__store/static/media/NotFound404.f78e40b0.svg",
+    "static/media/Plus.1e4c7223.svg": "/Lamp__store/static/media/Plus.1e4c7223.svg",
+    "static/media/SendedCart.ca5f0e52.svg": "/Lamp__store/static/media/SendedCart.ca5f0e52.svg",
+    "static/media/ic_search.3df4b208.svg": "/Lamp__store/static/media/ic_search.3df4b208.svg",
+    "static/media/ic_user.97ebb0d2.svg": "/Lamp__store/static/media/ic_user.97ebb0d2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.24d70842.js",
+    "static/js/2.8d948922.chunk.js",
+    "static/css/main.a5cc0be9.chunk.css",
+    "static/js/main.710fef1a.chunk.js"
+  ]
+}
