@@ -62,6 +62,7 @@
     justify-content: center;
     max-width: 1140px;
     margin: auto;
+    padding-bottom: 15px;
     &__btn {
         width: fit-content;
         background: #fff;
@@ -70,6 +71,11 @@
         outline: none;
         cursor: pointer;
         border: 1px solid #000;
+        transition: .2s;
+        &:hover{
+            color: #fff;
+            background: #000;
+        }
     }
 }
 @media screen and (max-width: 600px) {

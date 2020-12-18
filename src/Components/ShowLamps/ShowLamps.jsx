@@ -4,7 +4,7 @@ import { ReactComponent as Add } from "../../Assets/Add.svg";
 
 
 
-export const ShowLamps = ({ props, addProductToCart, deleteProductFromCart, cutProductFromCart }) => {
+export const ShowLamps = ({ props, addProductToCart, deleteProductFromCart, cutProductFromCart, showMore, showLess, allProducts }) => {
 
     const host = 'https://morgan-shop.herokuapp.com/'
 
@@ -45,8 +45,8 @@ export const ShowLamps = ({ props, addProductToCart, deleteProductFromCart, cutP
                 })}
             </div>
             <div className="show-more">
-                <button className="show-more__btn">Show more</button>
-                </div>
+                <button onClick={props.length == allProducts.length ? showLess : showMore} className="show-more__btn">{props.length == allProducts.length ? 'Show less' : 'Show more'}</button>
+            </div>
 
 
         </>

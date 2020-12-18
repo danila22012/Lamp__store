@@ -12,7 +12,7 @@ export const CartComponent = ({ cartProducts, addProductToCart, deleteProductFro
 
     const host = 'https://morgan-shop.herokuapp.com/'
     const [isSended, setisSended] = useState(false) // костыль из-за класов, больше не использовать классы, только хуки
-    let sssss = isSended
+    
 
     let sum = 0
     return (
@@ -21,7 +21,7 @@ export const CartComponent = ({ cartProducts, addProductToCart, deleteProductFro
 
         <div className="cart">
 
-            {sssss ?
+            {isSended ?
                 <>
                     <div className="cart__title">thank you</div>
                     <div className=" cart__empty">

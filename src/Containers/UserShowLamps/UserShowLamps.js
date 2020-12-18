@@ -49,7 +49,11 @@ class UserShowLamps extends Component {
 
         let pathName = ''
 
+        if (this.state.tempArr.length === 0 && this.props.sortedProducts.length != 0) {
+            this.setState({ tempArr: this.props.sortedProducts.slice(0, this.state.amountOfELements) })
 
+
+        }
 
         if (this.props.category.categoriesCont.length !== 0) {
 
@@ -83,11 +87,11 @@ class UserShowLamps extends Component {
         super()
         this.state = {
             tempArr: [],
-            isLoading:false,
-
-
+            amountOfELements: 12,
+            elementIncrement: 12,
         }
     }
+
 
     sortTempArr = (el) => {
         
@@ -113,6 +117,39 @@ class UserShowLamps extends Component {
     }
 
 
+    sortTempArr = (el) => {
+
+
+        const tempArr = [...this.state.tempArr]
+
+        tempArr.sort((a, b) => {
+
+            switch (el.target.value) {
+                case 'newness':
+                    return new Date(b.timeStamp) - new Date(a.timeStamp);
+
+                case "lowToHigh":
+                    return a.price - b.price
+
+                case "highToLow":
+                    return b.price - a.price
+                default:
+                    break
+            }
+        })
+        this.setState({ tempArr: tempArr })
+    }
+
+    showMore = () => {
+        this.setState({
+            tempArr: this.props.sortedProducts.slice(0, this.state.tempArr.length + this.state.elementIncrement),
+
+        })
+
+    }
+    showLess = () => {
+        this.setState({ tempArr: this.props.sortedProducts.slice(0, this.state.amountOfELements) })
+    }
 
     render() {
         console.log(this.state.tempArr)
@@ -131,18 +168,22 @@ class UserShowLamps extends Component {
                         </Select>
                     </label>
                 </div>
-                <ShowLamps props={this.state.tempArr.length <= 0 ? this.props.sortedProducts : this.state.tempArr} 
-                addProductToCart={this.props.addProductToCart}
-                deleteProductFromCart={this.props.deleteProductFromCart}
-                cutProductFromCart={this.props.cutProductFromCart}
                 
+                <ShowLamps props={this.state.tempArr}
+                    addProductToCart={this.props.addProductToCart}
+                    deleteProductFromCart={this.props.deleteProductFromCart}
+                    cutProductFromCart={this.props.cutProductFromCart}
+                    showLess={this.showLess}
+                    showMore={this.showMore}
+                    allProducts = {this.props.products.products}
+
                 />
             </>
         );
     }
 }
 const mapStateToProps = (state) => {
-
+    
     return ({
 
         category: state.categoryReducer,

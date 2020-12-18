@@ -3,7 +3,7 @@ import { Component } from "react";
 import { connect } from "react-redux";
 import { ShowLamps } from "../../Components/ShowLamps/ShowLamps";
 
-import { Select, MenuItem  } from '@material-ui/core';
+import { Select, MenuItem } from '@material-ui/core';
 import { OverlayCategories } from "../../Components/OverlayCategories/OverlayCategories";
 
 import { addProductToCart } from "../../Actions/Actions";
@@ -11,10 +11,24 @@ import { deleteProductFromCart, cutProductFromCart } from "../../Actions/Actions
 
 class UserHomePage extends Component {
 
+
+
+
+    componentDidUpdate() {
+        if (this.state.tempArr.length === 0 && this.props.products.products.length != 0) {
+            this.setState({ tempArr: this.props.products.products.slice(0, this.state.amountOfELements) })
+
+
+        }
+
+    }
+
     constructor() {
         super()
         this.state = {
             tempArr: [],
+            amountOfELements: 12,
+            elementIncrement: 12,
         }
     }
 
@@ -22,8 +36,8 @@ class UserHomePage extends Component {
     sortTempArr = (el) => {
 
 
-        const tempArr = [...this.props.products.products]
-        console.log(tempArr);
+        const tempArr = [...this.state.tempArr]
+
         tempArr.sort((a, b) => {
 
             switch (el.target.value) {
@@ -42,11 +56,21 @@ class UserHomePage extends Component {
         this.setState({ tempArr: tempArr })
     }
 
+    showMore = () => {
+        this.setState({
+            tempArr: this.props.products.products.slice(0, this.state.tempArr.length + this.state.elementIncrement),
+
+        })
+
+    }
+    showLess = () => {
+        this.setState({ tempArr: this.props.products.products.slice(0, this.state.amountOfELements) })
+    }
 
 
     render() {
 
-
+        console.log(this.state.tempArr.length);
         return (
             <>
                 <OverlayCategories props={this.props.category.categoriesCont} />
@@ -63,12 +87,16 @@ class UserHomePage extends Component {
 
 
 
-                <ShowLamps props={this.state.tempArr.length <= 0 ? this.props.products.products : this.state.tempArr}
+                <ShowLamps props={this.state.tempArr}
                     addProductToCart={this.props.addProductToCart}
                     deleteProductFromCart={this.props.deleteProductFromCart}
                     cutProductFromCart={this.props.cutProductFromCart}
+                    showLess={this.showLess}
+                    showMore={this.showMore}
+                    allProducts = {this.props.products.products}
 
                 />
+               
             </>
         );
 
