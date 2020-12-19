@@ -22,6 +22,14 @@ class UserHomePage extends Component {
         }
 
     }
+    componentDidMount() {
+        if (this.state.tempArr.length === 0 && this.props.products.products.length != 0) {
+            this.setState({ tempArr: this.props.products.products.slice(0, this.state.amountOfELements) })
+
+
+        }
+
+    }
 
     constructor() {
         super()
@@ -68,9 +76,10 @@ class UserHomePage extends Component {
     }
 
 
-    render() {
+    render() {  
 
-        console.log(this.state.tempArr.length);
+        console.log(this.state.tempArr);
+        console.log(this.props.products);
         return (
             <>
                 <OverlayCategories props={this.props.category.categoriesCont} />

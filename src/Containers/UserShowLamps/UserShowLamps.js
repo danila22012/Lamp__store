@@ -10,13 +10,19 @@ import { deleteProductFromCart, cutProductFromCart } from "../../Actions/Actions
 class UserShowLamps extends Component {
 
 
+    
 
     //для того случая когда пользователь переходит с домашней страницы
     componentDidMount() {
 
         let pathName = ''
 
-        
+        if (this.state.tempArr.length === 0 && this.props.products.products.length != 0) {
+            this.setState({ tempArr: this.props.products.products.slice(0, this.state.amountOfELements) })
+
+
+        }
+
 
         if (this.props.category.categoriesCont.length !== 0) {
 
