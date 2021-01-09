@@ -19,20 +19,13 @@ class UserShowLamps extends Component {
 
         if (this.state.tempArr.length === 0 && this.props.products.products.length != 0) {
             this.setState({ tempArr: this.props.products.products.slice(0, this.state.amountOfELements) })
-
-
         }
 
 
         if (this.props.category.categoriesCont.length !== 0) {
 
-            
-
             let tempArr = this.props.category.categoriesCont.filter(el => el.alias === this.props.path)
             pathName = tempArr[0].id
-
-            console.log(this.props.path);
-
             if (this.props.sortedProducts.length !== 0) {
                 if (this.props.sortedProducts[0].categoryId !== pathName) {
                     this.props.sortProductsInterior(pathName)
@@ -63,13 +56,8 @@ class UserShowLamps extends Component {
 
         if (this.props.category.categoriesCont.length !== 0) {
 
-            
-
             let tempArr = this.props.category.categoriesCont.filter(el => el.alias === this.props.path)
             pathName = tempArr[0].id
-
-            console.log(this.props.path);
-
             if (this.props.sortedProducts.length !== 0) {
                 if (this.props.sortedProducts[0].categoryId !== pathName) {
                     this.props.sortProductsInterior(pathName)
@@ -78,11 +66,8 @@ class UserShowLamps extends Component {
             }
             //  проверка, при смене страницы, 
             //  сверяю локальный путь, с путём обьекта в пропсе если не совпадает диспатчу новый адресс
-
             if (this.props.products.products.length !== 0 && this.props.sortedProducts.length === 0) {
-
-                
-                this.props.sortProductsInterior(pathName)
+              this.props.sortProductsInterior(pathName)
             }
 
         }
@@ -95,15 +80,14 @@ class UserShowLamps extends Component {
             tempArr: [],
             amountOfELements: 12,
             elementIncrement: 12,
+            sortValue:'newness'
         }
     }
 
 
     sortTempArr = (el) => {
         
-
         const tempArr = [...this.props.sortedProducts]
-
         tempArr.sort((a, b) => {
 
             switch (el.target.value) {
@@ -125,9 +109,7 @@ class UserShowLamps extends Component {
 
     sortTempArr = (el) => {
 
-
         const tempArr = [...this.state.tempArr]
-
         tempArr.sort((a, b) => {
 
             switch (el.target.value) {
@@ -158,16 +140,14 @@ class UserShowLamps extends Component {
     }
 
     render() {
-        console.log(this.state.tempArr)
-        console.log(this.props);
-       
+        
 
         return (
             <>
 
                 <div className="product-sort">
                     <label> sort by:
-                        <Select className="product-sort__sort" onChange={this.sortTempArr}>
+                        <Select className="product-sort__sort" value={this.state.sortValue} onChange={this.sortTempArr}>
                             <MenuItem value="newness">Newness</MenuItem>
                             <MenuItem value="lowToHigh">Price low to high</MenuItem>
                             <MenuItem value="highToLow">Price high to low</MenuItem>

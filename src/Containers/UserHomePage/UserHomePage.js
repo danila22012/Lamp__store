@@ -37,6 +37,7 @@ class UserHomePage extends Component {
             tempArr: [],
             amountOfELements: 12,
             elementIncrement: 12,
+            sortValue:'newness'
         }
     }
 
@@ -78,15 +79,14 @@ class UserHomePage extends Component {
 
     render() {  
 
-        console.log(this.state.tempArr);
-        console.log(this.props.products);
+    
         return (
             <>
                 <OverlayCategories props={this.props.category.categoriesCont} />
 
                 <div className="product-sort">
                     <label> sort by:
-                        <Select className="product-sort__sort" onChange={this.sortTempArr}>
+                        <Select className="product-sort__sort"  value={this.state.sortValue} onChange={this.sortTempArr}>
                             <MenuItem value="newness">Newness</MenuItem>
                             <MenuItem value="lowToHigh">Price low to high</MenuItem>
                             <MenuItem value="highToLow">Price high to low</MenuItem>

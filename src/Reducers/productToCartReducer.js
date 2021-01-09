@@ -17,12 +17,8 @@ export const productToCartReducer = (state = initialState, action) => {
 
             tempArr1.map(el => {
 
-                if (el.id === action.payload.id) {//проверка чтобы увеличить каунтер
-                    console.log(el.counter);
+                if (el.id === action.payload.id) {//проверка чтобы увеличить каунтер                 
                     el.counter += 1
-                    console.log('yes');
-
-
                 }
                 else if (!tempArr1.includes(action.payload)) { //проверка, если в массиве елмент как в пайлоаде
                     tempArr1 = [...tempArr1, action.payload]
@@ -32,7 +28,6 @@ export const productToCartReducer = (state = initialState, action) => {
             })
 
             if (tempArr1.length === 0) {//если массив пуст
-                console.log('if == 0 ');
                 tempArr1 = [action.payload]
             }
             return {
@@ -61,10 +56,7 @@ export const productToCartReducer = (state = initialState, action) => {
 
 
         case "DELETE_PRODUCT_FROM_CART":
-
-            console.log(state);
-            let excecutedArr = state.cartProducts.filter(el => el.id !== action.payload.id)
-            console.log(excecutedArr);
+            let excecutedArr = state.cartProducts.filter(el => el.id !== action.payload.id)         
             return {
                 ...state,
                 cartProducts: [...excecutedArr]
