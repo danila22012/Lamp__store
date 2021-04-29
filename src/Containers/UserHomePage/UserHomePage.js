@@ -73,6 +73,7 @@ class UserHomePage extends Component {
 
     }
     showLess = () => {
+        console.log(this);
         this.setState({ tempArr: this.props.products.products.slice(0, this.state.amountOfELements) })
     }
 
@@ -103,6 +104,7 @@ class UserHomePage extends Component {
                     showLess={this.showLess}
                     showMore={this.showMore}
                     allProducts = {this.props.products.products}
+                    
 
                 />
                
